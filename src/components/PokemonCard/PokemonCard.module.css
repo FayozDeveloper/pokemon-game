@@ -53,6 +53,8 @@
 .cardFront {
     transform: rotateY(0deg);
     z-index: 2;
+    border-radius: 30px;
+    border:10px solid yellow;
 }
 
 .wrap {

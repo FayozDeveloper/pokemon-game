@@ -28,7 +28,6 @@
         background-position-y: 0;
     }
 }
-
 .forest {
     position: absolute;
     bottom: -300px;
@@ -63,6 +62,7 @@
     animation: text-fade-in 1000ms 800ms forwards;
 }
 
+
 @keyframes text-fade-in {
     from {
         right: 0;
@@ -86,4 +86,14 @@
     font-weight: normal;
     color: #fafafa;
     line-height: 32px;
+}
+
+@media only screen and (max-width: 649px) {
+    .container{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .container h1{
+        font-size: 47px;
+    }
 }
