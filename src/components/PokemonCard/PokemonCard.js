@@ -11,6 +11,21 @@ const PokemonCard = ({name,img,id, type,values}) => {
         setActive(!isActive);
     }
 
+    const NAMES = [
+        'Fayoz',
+        'Yahyo',
+        'Sayfiddin',
+        'Javlon',
+        'Jovohir',
+        'Rixsiboy',
+        'Mirjalol',
+        'Jalol-DO'
+    ]
+
+    function getRandomName(){
+        const index = Math.floor(Math.random() * NAMES.length)
+        return NAMES[index]
+    }
     return(
         <div className={s.root} onClick={HandlerClick}>
             <div className={`${s.pokemonCard} ${isActive ? s.active : ''}`}>
@@ -33,7 +48,7 @@ const PokemonCard = ({name,img,id, type,values}) => {
                             </span>
 
                             <h3 className={s.name}>
-                                {name}
+                                {getRandomName()}
                             </h3>
 
                             <small className={s.type}>
