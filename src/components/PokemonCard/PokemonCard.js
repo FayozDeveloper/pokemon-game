@@ -12,14 +12,14 @@ const PokemonCard = ({name,img,id, type,values}) => {
     }
 
     const NAMES = [
-        'Fayoz',
-        'Yahyo',
-        'Sayfiddin',
-        'Javlon',
-        'Jovohir',
-        'Rixsiboy',
-        'Mirjalol',
-        'Jalol-DO'
+        'Mark',
+        'Robert',
+        'Watt',
+        'Jacob',
+        'Mikel',
+        'David',
+        'Jim',
+        'Kim'
     ]
 
     function getRandomName(){
