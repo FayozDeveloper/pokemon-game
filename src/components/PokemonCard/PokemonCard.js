@@ -6,9 +6,13 @@ import cardBackSide from './img/card-back-side.jpg'
 const PokemonCard = ({name,img,id, type,values}) => {
 
     const [isActive, setActive] = useState(false)
+    const [randomName, setRandomName] = useState("")
 
     const HandlerClick = () =>{
         setActive(!isActive);
+        if (!isActive) {
+            setRandomName(getRandomName());
+        }
     }
 
     const NAMES = [
@@ -26,6 +30,7 @@ const PokemonCard = ({name,img,id, type,values}) => {
         const index = Math.floor(Math.random() * NAMES.length)
         return NAMES[index]
     }
+
     return(
         <div className={s.root} onClick={HandlerClick}>
             <div className={`${s.pokemonCard} ${isActive ? s.active : ''}`}>
@@ -48,7 +53,7 @@ const PokemonCard = ({name,img,id, type,values}) => {
                             </span>
 
                             <h3 className={s.name}>
-                                {getRandomName()}
+                                {randomName}
                             </h3>
 
                             <small className={s.type}>
